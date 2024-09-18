@@ -38,6 +38,21 @@ else:
         # Write to UI
         with st.chat_message(role):
             st.markdown(content)
+            
+    def handle_submit(message):
+        """
+        Submit handler:
+
+        You will modify this method to talk with an LLM and provide
+        context using data from Neo4j.
+        """
+
+        # Handle the response
+        with st.spinner('Thinking...'):
+            # # TODO: Replace this with a call to your LLM
+            from time import sleep
+            sleep(1)
+            write_message('assistant', message)
 
     # Display the existing chat messages via `st.chat_message`.
     for message in st.session_state.messages:
