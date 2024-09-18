@@ -26,7 +26,7 @@ else:
     # Create a session state variable to store the chat messages. This ensures that the
     # messages persist across reruns.
     if "messages" not in st.session_state:
-        st.session_state.messages = [{"role": "assistant", "content": "Hi, I'm the GraphAcademy Chatbot!  How can I help you?"},]
+        st.session_state.messages = [{"role": "assistant", "content": "Hi, I'm the UGent ISyE Chatbot!  How can I help you?"},]
 
     # Display the existing chat messages via `st.chat_message`.
     for message in st.session_state.messages:
