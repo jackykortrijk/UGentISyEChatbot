@@ -3,7 +3,6 @@ from openai import OpenAI
 
 # Page Config
 st.set_page_config("UGent ISyE Chatbot", page_icon="random")
-#st.set_page_config("Ebert", page_icon=":movie_camera:")
 
 # Show title and description.
 st.title("🤖 UGent ISyE Chatbot")
@@ -26,6 +25,19 @@ else:
     # messages persist across reruns.
     if "messages" not in st.session_state:
         st.session_state.messages = [{"role": "assistant", "content": "Hello👋, I'm the UGent ISyE Chatbot🤖! What can I do for you?"},]
+        
+    def write_message(role, content, save = True):
+        """
+        This is a helper function that saves a message to the
+        session state and then writes a message to the UI
+        """
+        # Append to session state
+        if save:
+            st.session_state.messages.append({"role": role, "content": content})
+
+        # Write to UI
+        with st.chat_message(role):
+            st.markdown(content)
 
     # Display the existing chat messages via `st.chat_message`.
     for message in st.session_state.messages:
