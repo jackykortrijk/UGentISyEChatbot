@@ -2,6 +2,7 @@ import streamlit as st
 from openai import OpenAI
 
 # Page Config
+st.set_page_config("UGent ISyE Chatbot", page_icon="random")
 #st.set_page_config("Ebert", page_icon=":movie_camera:")
 
 # Show title and description.
