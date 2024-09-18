@@ -2,7 +2,7 @@ import streamlit as st
 from openai import OpenAI
 
 # Page Config
-st.set_page_config("Ebert", page_icon=":movie_camera:")
+#st.set_page_config("Ebert", page_icon=":movie_camera:")
 
 # Show title and description.
 st.title("🤖 UGent ISyE Chatbot")
@@ -25,7 +25,7 @@ else:
     # Create a session state variable to store the chat messages. This ensures that the
     # messages persist across reruns.
     if "messages" not in st.session_state:
-        st.session_state.messages = [{"role": "assistant", "content": "Hi, I'm the UGent ISyE Chatbot!  How can I help you?"},]
+        st.session_state.messages = []
 
     # Display the existing chat messages via `st.chat_message`.
     for message in st.session_state.messages:
