@@ -1,5 +1,6 @@
 import streamlit as st
 from openai import OpenAI
+from langchain_community.graphs import Neo4jGraph
 
 # Page Config
 st.set_page_config("UGent ISyE Chatbot", page_icon="random")
