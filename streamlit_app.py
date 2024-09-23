@@ -37,7 +37,7 @@ else:
 
         # Write to UI
         with st.chat_message(role):
-            st.markdown(content)
+            st.markdown(content) #显示内容
             
     def handle_submit(message):
         """
